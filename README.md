@@ -27,19 +27,17 @@ It then contrasts this with **LLaMA 3**, a state-of-the-art Large Language Model
 
 ---
 
-## 📂 Dataset Information
+## 📂 Repository Structure
+The project is organized into three main tasks:
 
-### 1. IMDB Movie Reviews (Task 1 & 2)
-* **Source:** `tensorflow.keras.datasets.imdb`
-* **Description:** A dataset of 25,000 movie reviews, labeled by sentiment (positive/negative).
-* **Usage:** A subset of **100 reviews** was used to simulate a low-resource environment (80 Training / 20 Testing).
-
-### 2. Custom Knowledge Base (Task 3)
-* **Source:** User-generated text files.
-* **Content:** * `mars_colony_rules.txt`: Fictional rules for a Mars habitat.
-    * `cyber_pet_manual.txt`: Technical manual for a robotic pet.
-    * `secret_history_z.txt`: Classified mission logs.
-* **Purpose:** To test the RAG system's ability to retrieve specific, non-public information.
+* **`Task_1_RNN/`**: Contains the Jupyter notebook for the LSTM model.
+  * `rnn_sentiment_analysis.ipynb`: The main training and evaluation code.
+* **`Task_2_LLaMA/`**: Scripts for running the local LLaMA model.
+  * `llama_sentiment_analysis.py`: Python script for zero-shot sentiment classification.
+* **`Task_3_RAG/`**: The complete RAG system implementation.
+  * `rag_system.py`: The main script that performs retrieval and generation.
+  * `documents/`: Folder containing the custom text files (`mars_colony_rules.txt`, etc.).
+  * `rag_report.csv`: Auto-generated report comparing LLaMA with and without RAG.
 
 ---
 
@@ -72,21 +70,26 @@ It then contrasts this with **LLaMA 3**, a state-of-the-art Large Language Model
 
 ## 🚀 How to Run
 
+1.  **Clone the Repository**
+    ```bash
+    git clone [https://github.com/kamranwahab/NLP-Tasks-RNNs-LLMs-and-RAG-Systems](https://github.com/kamranwahab/NLP-Tasks-RNNs-LLMs-and-RAG-Systems)
+    cd NLP-RNN-LLaMA-RAG
+    ```
 
-1.  **Install Dependencies**
+2.  **Install Dependencies**
     ```bash
     pip install tensorflow numpy pandas sentence-transformers scikit-learn requests
     ```
 
-2.  **Run Task Scripts**
-    * **Task 1 (RNN):** Run the notebook `Task1_RNN.ipynb`.
+3.  **Run Task Scripts**
+    * **Task 1 (RNN):** Open and run `Task_1_RNN/rnn_sentiment_analysis.ipynb`.
     * **Task 2 (LLaMA):** Ensure Ollama is running (`ollama serve`), then run:
         ```bash
-        python task2_llama.py
+        python Task_2_LLaMA/llama_sentiment_analysis.py
         ```
-    * **Task 3 (RAG):** Update the document path in the script and run:
+    * **Task 3 (RAG):** Update the document path in `rag_system.py` and run:
         ```bash
-        python task3_rag.py
+        python Task_3_RAG/rag_system.py
         ```
 
 ---
