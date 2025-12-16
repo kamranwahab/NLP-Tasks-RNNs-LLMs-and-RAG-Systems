@@ -1,0 +1,5 @@
+The Mars Colony was established in 2045 by the United Space Coalition.
+All citizens must wear a biosuit when outside the domes between 18:00 and 06:00.
+The currency used on Mars is the "Red Credit", which is pegged to 5.5 US Dollars.
+Water rationing is in effect: each citizen is allowed 20 liters per day.
+Violation of the water ration results in a fine of 500 Red Credits.
